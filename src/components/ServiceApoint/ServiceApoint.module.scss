@@ -1,0 +1,113 @@
+@import "../../styles/variables";
+
+.root {
+  width: 90%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 3%;
+  color: $color-black;
+  margin-top: 1%;
+  .label {
+    width: 51%;
+    text-align: center;
+    font-weight: 600;
+    font-size: calc(#{$size});
+    margin-bottom: 1%;
+  }
+  p {
+    width: 51%;
+    margin: 0;
+    text-align: start;
+    font-size: calc(#{$size}/ 1.4);
+    margin-bottom: 2%;
+  }
+  .button_block {
+    border-radius: 20px;
+    border: 2px solid $color-dark-blue;
+    width: 45%;
+    padding: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    div {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      border-radius: 10px;
+      background-color: $color-blur-light;
+      padding: 4% 5%;
+      justify-content: center;
+      margin-bottom: 3%;
+      p {
+        font-size: calc(#{$size}/ 1.4);
+        margin: 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+    button {
+      width: 65%;
+      color: #fff;
+      border-radius: 10px;
+      padding: 5% 0%;
+      font-weight: 600;
+      background-color: $color-blue;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: calc(#{$size}/ 1.2);
+      font-family: inherit;
+      &:hover {
+        background-color: $color-dark-blue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .root {
+    .label {
+      width: 75%;
+      text-align: center;
+    }
+    p {
+      width: 75%;
+    }
+    .button_block {
+      width: 75%;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .root {
+    width: 95%;
+    margin: 4% 0%;
+    margin-bottom: 7%;
+    .label {
+      width: 100%;
+      font-size: 18px;
+      text-align: center;
+    }
+    p {
+      font-size: 15px;
+      width: 100%;
+    }
+    .button_block {
+      width: 95%;
+      margin-top: 2%;
+      padding: 5% 3%;
+      p {
+        font-size: 15px !important;
+        width: fit-content !important;
+      }
+      span {
+        font-size: 15px !important;
+      }
+      button {
+        font-size: 15px;
+      }
+    }
+  }
+}

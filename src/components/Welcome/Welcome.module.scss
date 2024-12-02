@@ -1,0 +1,111 @@
+@import "../../styles/variables";
+
+.root {
+  width: 84%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url("../../../public/main-back.webp");
+  background-size: cover;
+  padding: 4% 4%;
+  margin-top: 8%;
+  border-radius: 50px;
+  .wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.54);
+    box-shadow: 4px 4px 20px 0px rgba(246, 245, 244, 0.62);
+    border-radius: 50px;
+    padding: 5% 4%;
+    color: $color-black;
+    width: 70%;
+    img {
+      width: 40%;
+      height: 100%;
+      margin-bottom: 5%;
+    }
+    h1 {
+      font-size: calc(#{$size}* 1.2);
+      margin: 0;
+      font-weight: 400;
+      margin-bottom: 3%;
+    }
+  }
+  button {
+    font-size: calc(#{$size}/ 1.15);
+    background-color: $color-blue;
+    color: #fff;
+    padding: 3% 5%;
+    border-radius: 10px;
+    border: 1px solid $color-blue;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s;
+    &:hover {
+      background-color: $color-dark-blue;
+      border-color: $color-dark-blue;
+    }
+  }
+}
+.mobile_btn {
+  display: none;
+  width: 95%;
+  font-size: 15px;
+  background-color: $color-blue;
+  color: #fff;
+  padding: 3% 5%;
+  border-radius: 10px;
+  border: 1px solid $color-blue;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 3%;
+  font-family: inherit;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $color-dark-blue;
+    border-color: $color-dark-blue;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .root {
+    margin-top: 9%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .root {
+    margin-top: 13.5%;
+    border-radius: 10px;
+    width: 85%;
+    flex-direction: column;
+    padding: 5% 4%;
+    .wrapper {
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      width: 92%;
+      padding: 6% 4%;
+      h1 {
+        text-align: center;
+        font-size: 17px;
+      }
+      button {
+        display: none;
+      }
+    }
+  }
+  .mobile_btn {
+    display: block;
+    padding: 4% 5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .root {
+    margin-top: 17%;
+  }
+}

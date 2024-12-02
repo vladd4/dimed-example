@@ -1,0 +1,245 @@
+@import "../../styles/variables";
+
+.root {
+  width: 90%;
+  display: grid;
+  color: $color-black;
+  place-items: flex-start;
+  margin-bottom: 2%;
+  h2 {
+    color: $color-black;
+    max-width: 65%;
+    font-size: calc(#{$size}* 1.4);
+    font-weight: 400;
+    margin-bottom: 0%;
+  }
+  p {
+    font-size: calc(#{$size}/ 1.4);
+    margin: 1% 0%;
+  }
+  .list_block {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4%;
+    margin-top: 1%;
+    .list {
+      width: 55%;
+      .card {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: $color-blur-light;
+        border-radius: 20px;
+        gap: 5%;
+        margin-bottom: 2%;
+        cursor: pointer;
+        transition: all 0.3s;
+        border: 7px solid $color-blur-light !important;
+        padding: 2.2% 4%;
+        padding-right: 2.5%;
+        &:hover {
+          background-color: transparent !important;
+        }
+        img {
+          height: auto;
+          width: 17%;
+        }
+        h2 {
+          margin: 0;
+          margin-top: 1%;
+          font-weight: 400;
+          font-size: calc(#{$size}* 1.4);
+        }
+      }
+      .pricing_card {
+        border: 7px solid $color-blur-light !important;
+        padding: 2.2% 4%;
+        padding-right: 2.5%;
+        &:hover {
+          background-color: transparent !important;
+        }
+      }
+      .pricing_clicked {
+        border: 7px solid $color-blur-light !important;
+        padding: 2.2% 4%;
+        padding-right: 2.5%;
+        background-color: transparent;
+      }
+      .service_clicked {
+        background-color: transparent;
+      }
+      .table_mobile {
+        display: none !important;
+      }
+      .table {
+        width: 80%;
+        margin: 5% 0%;
+        transition: all 0.3s;
+        display: none;
+        .table_item {
+          width: 90%;
+          margin-bottom: 1%;
+          display: flex;
+          padding: 5%;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 10px;
+          &:nth-child(even) {
+            background-color: #f9fcff;
+          }
+          &:nth-child(odd) {
+            background-color: $color-blur-light;
+          }
+          span {
+            font-weight: bold;
+            font-size: calc(#{$size}/ 1.3);
+          }
+          p {
+            font-size: calc(#{$size}/ 1.4);
+            margin: 0%;
+          }
+        }
+      }
+      .show_table {
+        display: block !important;
+      }
+    }
+    .service_info {
+      width: 40%;
+      display: none;
+      .list_item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2%;
+        text-decoration: none;
+        color: $color-black;
+        transition: all 0.3s;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.7;
+        }
+        p {
+          font-size: calc(#{$size}/ 1.4);
+          margin: 1% 0%;
+        }
+      }
+    }
+    .show_info {
+      display: block;
+      position: sticky !important;
+      top: 15%;
+    }
+  }
+}
+
+.loader {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+.mobile_loader {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+@media screen and (max-width: 750px) {
+  .root {
+    .list_block {
+      .list {
+        width: 65%;
+      }
+      .show_info {
+        width: 30%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .root {
+    width: 95%;
+    margin-top: 0%;
+    padding-top: 0%;
+    h2 {
+      font-size: 22px;
+      margin-top: 2%;
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 3%;
+    }
+    .list_block {
+      .list {
+        width: 100%;
+        .card {
+          border-radius: 10px;
+          gap: 8%;
+          &:hover {
+            background-color: $color-blur-light !important;
+          }
+          h2 {
+            font-size: 20px;
+          }
+          img {
+            width: 23%;
+          }
+        }
+        .pricing_clicked {
+          &:hover {
+            background-color: transparent !important;
+          }
+        }
+        .service_clicked {
+          &:hover {
+            background-color: transparent !important;
+          }
+        }
+        .show_table_mobile {
+          display: block !important;
+        }
+        .table {
+          width: 100%;
+          .mobile_service {
+            width: 100%;
+            text-align: center;
+            background-color: $color-blur-light;
+            font-size: 14px;
+            margin: 0%;
+            margin-bottom: 1.5%;
+            border-radius: 10px;
+            padding: 8% 0%;
+            display: block;
+            color: $color-black;
+            text-decoration: none;
+            transition: all 0.3s;
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+          .table_item {
+            p {
+              font-size: 14px;
+              max-width: 70%;
+            }
+            span {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+      .service_info {
+        display: none;
+      }
+    }
+  }
+  .loader {
+    display: none;
+  }
+  .mobile_loader {
+    display: block;
+  }
+}

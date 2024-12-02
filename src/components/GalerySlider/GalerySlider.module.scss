@@ -1,0 +1,68 @@
+@import "../../styles/variables";
+
+.root {
+  width: 90%;
+  margin: 1% 0%;
+  display: grid;
+  margin-bottom: 4%;
+  place-items: center;
+  h2 {
+    font-size: calc(#{$size}* 1.4);
+    font-weight: 400;
+    color: $color-black;
+    margin-top: 0;
+  }
+}
+
+.slider {
+  width: 100%;
+  .slider_div {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    border-radius: 25px;
+  }
+}
+@media screen and (min-width: 1550px) {
+  .slider {
+    .slider_div {
+      height: 360px;
+    }
+  }
+}
+@media screen and (max-width: 1250px) {
+  .slider {
+    .slider_div {
+      height: 250px;
+    }
+  }
+}
+@media screen and (max-width: 1000px) {
+  .slider {
+    .slider_div {
+      height: 220px;
+    }
+  }
+}
+@media screen and (max-width: 650px) {
+  .root {
+    width: 95%;
+    margin-bottom: 10%;
+    h2 {
+      font-size: 21px;
+    }
+  }
+  .slider {
+    .slider_div {
+      height: 300px;
+    }
+  }
+}
+@media screen and (max-width: 400px) {
+  .slider {
+    .slider_div {
+      height: 250px;
+    }
+  }
+}
